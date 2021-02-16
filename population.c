@@ -19,11 +19,14 @@ int main(void)
   while (end <= start);
   
     // TODO: Calculate number of years until we reach threshold
-  int years, born, died, growth;
-    for (years = 0; (start < end); years++) {
+  int years, born, died;
+  years = 0;
+  
+    while (start < end) {
         born = start / 3;
         died = start / 4;
         start = start + born - died;
+        years++;
     }
     // TODO: Print number of years
     printf("Years: %i\n", years);
