@@ -20,12 +20,12 @@ int main(void)
   
     // TODO: Calculate number of years until we reach threshold
   int years, born, died, growth;
-    for (years = 0; start < end; years++) {
+    for (years = 0; (start < end); years++) {
         born = start / 3;
         died = start / 4;
-        growth = start + born - died;
+        start = start + born - died;
     }
     // TODO: Print number of years
-    printf("Years: %i\n", growth);
+    printf("Years: %i\n", years);
 
 }
